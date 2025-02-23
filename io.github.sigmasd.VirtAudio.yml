@@ -132,17 +132,7 @@ modules:
         mkdir -p /app/lib
         mv $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-${ARCH}-gnu/1.10.0-nightly.2025022119/index.linux-${ARCH}-gnu.node /app/lib/index.linux-gnu.node
       #
-      # @types/node 22.5.4
-      - mkdir -p $DENO_DIR/npm/registry.npmjs.org/@types/node
-      - tar xf node-22.5.4.tgz
-      - mv node $DENO_DIR/npm/registry.npmjs.org/@types/node/22.5.4
-      - mv ./types-node-registry.json $DENO_DIR/npm/registry.npmjs.org/@types/node/registry.json
-      #
       # These next one are not needed we just install its meta file
-      #
-      # undici-types 6.19.8
-      - mkdir -p $DENO_DIR/npm/registry.npmjs.org/undici-types/6.19.8
-      - mv ./undici-types-registry.json $DENO_DIR/npm/registry.npmjs.org/undici-types/registry.json
       # @slint-ui/slint-ui-binary-darwin-arm64
       - mkdir -p $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-darwin-arm64
       - mv ./slint-ui-binary-darwin-arm64-registry.json $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-darwin-arm64/registry.json
@@ -164,8 +154,7 @@ modules:
       - patch $DENO_DIR/npm/registry.npmjs.org/@jsquash/png/3.0.1/codec/pkg/squoosh_png.js
         < squoosh_png.js.patch
       # Compile App
-      - DENORT_BIN=$PWD/denort ./deno compile --output virtaudio-bin --cached-only
-        --allow-all --include ./src/gui.slint --include ./src/client.html ./src/gui.ts
+      - DENORT_BIN=$PWD/denort ./deno compile --no-check --output virtaudio-bin --cached-only --allow-all --include ./src/gui.slint --include ./src/client.html ./src/gui.ts
 
       # Install metadata
       - install -D distro/io.github.sigmasd.VirtAudio.desktop -t /app/share/applications/
@@ -240,10 +229,6 @@ modules:
         path: ./rust-module.cjs.patch
       - type: file
         path: ./squoosh_png.js.patch
-
-      - type: file
-        url: https://registry.npmjs.org/@types/node/-/node-22.5.4.tgz
-        sha256: f807339f94bd29b5776191dc24807b3a7ab2266b979951a10569b45a44d49235
 
       # dependencies metadata
       - type: dir
