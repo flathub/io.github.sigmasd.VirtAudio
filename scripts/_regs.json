@@ -7,7 +7,5 @@
   "@slint-ui/slint-ui-binary-darwin-x64": "slint-ui-binary-darwin-x64-registry.json",
   "@slint-ui/slint-ui-binary-linux-arm64-gnu": "slint-ui-binary-linux-arm64-gnu-registry.json",
   "@slint-ui/slint-ui-binary-linux-x64-gnu": "slint-ui-binary-linux-x64-gnu-registry.json",
-  "slint-ui": "slint-ui-registry.json",
-  "@types/node": "types-node-registry.json",
-  "undici-types": "undici-types-registry.json"
+  "slint-ui": "slint-ui-registry.json"
 }
