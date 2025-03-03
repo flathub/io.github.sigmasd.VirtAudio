@@ -1,6 +1,6 @@
 app-id: io.github.sigmasd.VirtAudio
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: "24.08"
 sdk: org.freedesktop.Sdk
 command: virtaudio
 finish-args:
@@ -107,8 +107,8 @@ modules:
       #
       # slint-ui
       - mkdir -p $DENO_DIR/npm/registry.npmjs.org/slint-ui
-      - tar xf slint-ui-1.10.0-nightly.2025022119.tgz
-      - mv package $DENO_DIR/npm/registry.npmjs.org/slint-ui/1.10.0-nightly.2025022119
+      - tar xf slint-ui-1.10.0.tgz
+      - mv package $DENO_DIR/npm/registry.npmjs.org/slint-ui/1.10.0
       - mv ./slint-ui-registry.json $DENO_DIR/npm/registry.npmjs.org/slint-ui/registry.json
       #
       # @slint-ui/slint-ui-binary-linux-x64-gnu
@@ -126,11 +126,11 @@ modules:
         elif [ "$(uname -m)" = "x86_64" ]; then
           ARCH=x64
         fi
-        tar xf slint-ui-binary-linux-${ARCH}-gnu-1.10.0-nightly.2025022119.tgz
-        mv package $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-${ARCH}-gnu/1.10.0-nightly.2025022119
+        tar xf slint-ui-binary-linux-${ARCH}-gnu-1.10.0.tgz
+        mv package $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-${ARCH}-gnu/1.10.0
         # We point the app to the library location at runtime, it can't be embedded in the compiled executable because deno won't be able to dlopen it (current limitation)
         mkdir -p /app/lib
-        mv $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-${ARCH}-gnu/1.10.0-nightly.2025022119/index.linux-${ARCH}-gnu.node /app/lib/index.linux-gnu.node
+        mv $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-${ARCH}-gnu/1.10.0/index.linux-${ARCH}-gnu.node /app/lib/index.linux-gnu.node
       #
       # These next one are not needed we just install its meta file
       # @slint-ui/slint-ui-binary-darwin-arm64
@@ -148,13 +148,10 @@ modules:
 
       # Patches for deno compile to work
       # allow runtime loading of native library htps://github.com/napi-rs/napi-rs/issues/2468
-      - patch $DENO_DIR/npm/registry.npmjs.org/slint-ui/1.10.0-nightly.2025022119/rust-module.cjs
+      - patch $DENO_DIR/npm/registry.npmjs.org/slint-ui/1.10.0/rust-module.cjs
         < rust-module.cjs.patch
-      # https://github.com/denoland/deno/issues/28129
-      - patch $DENO_DIR/npm/registry.npmjs.org/@jsquash/png/3.0.1/codec/pkg/squoosh_png.js
-        < squoosh_png.js.patch
       # Compile App
-      - DENORT_BIN=$PWD/denort ./deno compile --no-check --output virtaudio-bin --cached-only --allow-all --include ./src/gui.slint --include ./src/client.html ./src/gui.ts
+      - DENORT_BIN=$PWD/denort ./deno compile --no-lock --no-check --output virtaudio-bin --cached-only --allow-all --include ./src/gui.slint --include ./src/client.html ./src/gui.ts
 
       # Install metadata
       - install -D distro/io.github.sigmasd.VirtAudio.desktop -t /app/share/applications/
@@ -171,8 +168,8 @@ modules:
       # app
       - type: archive
         # url: https://github.com/sigmaSd/virtaudio/archive/refs/heads/master.tar.gz
-        url: https://github.com/sigmaSd/virtaudio/archive/refs/tags/0.0.15.tar.gz
-        sha256: c35c47a943286e08d83abbcd458760c7da71999eaeb72e33e2f0d23dc796091f
+        url: https://github.com/sigmaSd/virtaudio/archive/refs/tags/0.0.17.tar.gz
+        sha256: b39af940807c7bced439b38cea0197638a07942f7de809bd51faedde320dc616
 
       # deno
       - type: archive
@@ -205,18 +202,18 @@ modules:
         sha256: 7529b1f4c0e78c4acad1a54eed18633a1b6f5188f46e8e37389b84acf7c31c1d
 
       - type: file
-        url: https://registry.npmjs.org/slint-ui/-/slint-ui-1.10.0-nightly.2025022119.tgz
-        sha256: 1c98646455aa5d3b78fa63e4e844d960d1c609fba48444686f12c6fc88cc7a3d
+        url: https://registry.npmjs.org/slint-ui/-/slint-ui-1.10.0.tgz
+        sha256: bb52bc55f84d6e2c23802aab387a9d5e1779882072cfa7c5556045b136ab9e35
 
       - type: file
-        url: https://registry.npmjs.org/@slint-ui/slint-ui-binary-linux-x64-gnu/-/slint-ui-binary-linux-x64-gnu-1.10.0-nightly.2025022119.tgz
-        sha256: 832fb81320b5c7bb7b8f4c8490fcb98fe263924f9aa1cbdcabdb8df0bdd7dc33
+        url: https://registry.npmjs.org/@slint-ui/slint-ui-binary-linux-x64-gnu/-/slint-ui-binary-linux-x64-gnu-1.10.0.tgz
+        sha256: 60a524a847f9dd692634935cc291383bf6a4e4fbf61ca8aa0100bcd282179b06
         only-arches:
           - x86_64
 
       - type: file
-        url: https://registry.npmjs.org/@slint-ui/slint-ui-binary-linux-arm64-gnu/-/slint-ui-binary-linux-arm64-gnu-1.10.0-nightly.2025022119.tgz
-        sha256: 0bd91b5db3c561bebacaf2ddacfa306ed708a25566483866e833a13cd8989ace
+        url: https://registry.npmjs.org/@slint-ui/slint-ui-binary-linux-arm64-gnu/-/slint-ui-binary-linux-arm64-gnu-1.10.0.tgz
+        sha256: dc78b56204871155decd04715cc6d55671d7294b42bdeaf1fb2f289924a27c17
         only-arches:
           - aarch64
 
@@ -227,8 +224,6 @@ modules:
 
       - type: file
         path: ./rust-module.cjs.patch
-      - type: file
-        path: ./squoosh_png.js.patch
 
       # dependencies metadata
       - type: dir

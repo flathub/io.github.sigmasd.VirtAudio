@@ -2,17 +2,9 @@
   "name": "slint-ui",
   "dist-tags": {},
   "versions": {
-    "1.10.0-nightly.2025022119": {
+    "1.10.0": {
       "name": "slint-ui",
-      "version": "1.10.0-nightly.2025022119",
-      "main": "dist/index.js",
-      "types": "dist/index.d.ts",
-      "homepage": "https://github.com/slint-ui/slint",
-      "license": "SEE LICENSE IN LICENSE.md",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/slint-ui/slint.git"
-      },
+      "version": "1.10.0",
       "keywords": [
         "GUI",
         "UI",
@@ -22,82 +14,88 @@
         "desktop",
         "embedded"
       ],
-      "description": "Slint is a declarative GUI toolkit to build native user interfaces for desktop and embedded applications.",
-      "devDependencies": {
-        "@ava/typescript": "5.0.0",
-        "@biomejs/biome": "1.9.4",
-        "@types/capture-console": "1.0.5",
-        "@types/node": "20.16.10",
-        "ava": "6.2.0",
-        "capture-console": "1.0.2",
-        "jimp": "1.6.0",
-        "typedoc": "0.27.7",
-        "typescript": "5.7.3"
-      },
-      "engines": { "node": ">= 10" },
-      "scripts": {
-        "artifacts": "napi artifacts",
-        "compile": "tsc --build",
-        "build": "napi build --platform --release --js rust-module.cjs --dts rust-module.d.cts -c binaries.json",
-        "build:debug": "napi build --platform --js rust-module.cjs --dts rust-module.d.cts -c binaries.json && pnpm compile",
-        "build:testing": "napi build --platform --js rust-module.cjs --dts rust-module.d.cts -c binaries.json --features testing && pnpm compile",
-        "install": "node build-on-demand.mjs",
-        "docs": "pnpm build && typedoc --hideGenerator --readme cover.md typescript/index.ts && cargo about generate thirdparty.hbs -o docs/thirdparty.html",
-        "docs:debug": "pnpm build:debug && typedoc --hideGenerator --readme cover.md typescript/index.ts",
-        "check": "biome check",
-        "format": "biome format",
-        "format:fix": "biome format --write",
-        "lint": "biome lint",
-        "lint:fix": "biome lint --fix",
-        "test": "tsc --build __test__/tsconfig.json && ava"
-      },
+      "license": "SEE LICENSE IN LICENSE.md",
+      "_id": "slint-ui@1.10.0",
+      "maintainers": [{ "name": "tronical", "email": "npm@slint-ui.com" }],
+      "homepage": "https://github.com/slint-ui/slint",
+      "bugs": { "url": "https://github.com/slint-ui/slint/issues" },
       "ava": {
-        "typescript": {
-          "rewritePaths": { "__test__/": "build/" },
-          "compile": false,
-          "extensions": ["mts"]
-        },
         "timeout": "2m",
+        "typescript": {
+          "compile": false,
+          "extensions": ["mts"],
+          "rewritePaths": { "__test__/": "build/" }
+        },
         "workerThreads": false
       },
-      "dependencies": { "@napi-rs/cli": "2.18.4" },
-      "optionalDependencies": {
-        "@slint-ui/slint-ui-binary-linux-x64-gnu": "1.10.0-nightly.2025022119",
-        "@slint-ui/slint-ui-binary-linux-arm64-gnu": "1.10.0-nightly.2025022119",
-        "@slint-ui/slint-ui-binary-darwin-x64": "1.10.0-nightly.2025022119",
-        "@slint-ui/slint-ui-binary-darwin-arm64": "1.10.0-nightly.2025022119",
-        "@slint-ui/slint-ui-binary-win32-x64-msvc": "1.10.0-nightly.2025022119",
-        "@slint-ui/slint-ui-binary-win32-ia32-msvc": "1.10.0-nightly.2025022119"
-      },
-      "_id": "slint-ui@1.10.0-nightly.2025022119",
-      "readmeFilename": "README.md",
-      "bugs": { "url": "https://github.com/slint-ui/slint/issues" },
-      "_integrity": "sha512-i4zLeb7sk3K+Gbp/GtuaFXy6hD1lkB1XwBjKU+aznxWEj4zboCFQPGMKIR6PdRXTOcVEPoP8+/JKmzFOc2iNIQ==",
-      "_resolved": "/home/runner/work/slint/slint/api/node/slint-ui-1.10.0-nightly.2025022119.tgz",
-      "_from": "file:api/node/slint-ui-1.10.0-nightly.2025022119.tgz",
-      "_nodeVersion": "20.18.2",
-      "_npmVersion": "10.8.2",
       "dist": {
-        "integrity": "sha512-i4zLeb7sk3K+Gbp/GtuaFXy6hD1lkB1XwBjKU+aznxWEj4zboCFQPGMKIR6PdRXTOcVEPoP8+/JKmzFOc2iNIQ==",
-        "shasum": "b5574bd9b459da5ede04d4d95d332bc02b6efaf8",
-        "tarball": "https://registry.npmjs.org/slint-ui/-/slint-ui-1.10.0-nightly.2025022119.tgz",
+        "shasum": "2c74c25ad3d87e8bf25217ab6795e3b9801ca58a",
+        "tarball": "https://registry.npmjs.org/slint-ui/-/slint-ui-1.10.0.tgz",
         "fileCount": 51,
-        "unpackedSize": 426710,
+        "integrity": "sha512-+Z/0uBZDGAoF6u/LPe0kDk669C4gR/uIHthxrs1Q29FKdoMT6x9I257ZujTjYct3skMvJ148r4J6TuGRtvevwQ==",
         "signatures": [
           {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEUCIC0iuOOeYojGcDPZA4qCxMAbscA+6eFBPcvyys/Il4xIAiEAr/wWsrzgVMZEsTeT4vdjneaH46V2BCesBo8h5MvBhMg="
+            "sig": "MEQCIGbrIeKZDgEA3wlYf8U6RUW38CjMxIfG6yxVk6bPeWUNAiB4HHV6xVuP7WPwvjagwnkcMwIj9yD9CWmIhcbpoWEXgw==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
-        ]
+        ],
+        "unpackedSize": 426114
+      },
+      "main": "dist/index.js",
+      "_from": "file:api/node/slint-ui-1.10.0.tgz",
+      "types": "dist/index.d.ts",
+      "engines": { "node": ">= 10" },
+      "scripts": {
+        "docs": "pnpm build && typedoc --hideGenerator --readme cover.md typescript/index.ts && cargo about generate thirdparty.hbs -o docs/thirdparty.html",
+        "lint": "biome lint",
+        "test": "tsc --build __test__/tsconfig.json && ava",
+        "build": "napi build --platform --release --js rust-module.cjs --dts rust-module.d.cts -c binaries.json",
+        "check": "biome check",
+        "format": "biome format",
+        "compile": "tsc --build",
+        "install": "node build-on-demand.mjs",
+        "lint:fix": "biome lint --fix",
+        "artifacts": "napi artifacts",
+        "docs:debug": "pnpm build:debug && typedoc --hideGenerator --readme cover.md typescript/index.ts",
+        "format:fix": "biome format --write",
+        "build:debug": "napi build --platform --js rust-module.cjs --dts rust-module.d.cts -c binaries.json && pnpm compile",
+        "build:testing": "napi build --platform --js rust-module.cjs --dts rust-module.d.cts -c binaries.json --features testing && pnpm compile"
       },
       "_npmUser": { "name": "tronical", "email": "npm@slint-ui.com" },
-      "directories": {},
-      "maintainers": [{ "name": "tronical", "email": "npm@slint-ui.com" }],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages-npm-production",
-        "tmp": "tmp/slint-ui_1.10.0-nightly.2025022119_1740202521737_0.5300457131623786"
+      "_resolved": "/home/runner/work/slint/slint/api/node/slint-ui-1.10.0.tgz",
+      "_integrity": "sha512-+Z/0uBZDGAoF6u/LPe0kDk669C4gR/uIHthxrs1Q29FKdoMT6x9I257ZujTjYct3skMvJ148r4J6TuGRtvevwQ==",
+      "repository": {
+        "url": "git+https://github.com/slint-ui/slint.git",
+        "type": "git"
       },
-      "_hasShrinkwrap": false
+      "_npmVersion": "10.8.2",
+      "description": "Slint is a declarative GUI toolkit to build native user interfaces for desktop and embedded applications.",
+      "directories": {},
+      "_nodeVersion": "20.18.3",
+      "dependencies": { "@napi-rs/cli": "2.18.4" },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "ava": "6.2.0",
+        "jimp": "1.6.0",
+        "typedoc": "0.27.8",
+        "typescript": "5.7.3",
+        "@types/node": "20.16.10",
+        "@biomejs/biome": "1.9.4",
+        "@ava/typescript": "5.0.0",
+        "capture-console": "1.0.2",
+        "@types/capture-console": "1.0.5"
+      },
+      "optionalDependencies": {
+        "@slint-ui/slint-ui-binary-darwin-x64": "1.10.0",
+        "@slint-ui/slint-ui-binary-darwin-arm64": "1.10.0",
+        "@slint-ui/slint-ui-binary-linux-x64-gnu": "1.10.0",
+        "@slint-ui/slint-ui-binary-win32-x64-msvc": "1.10.0",
+        "@slint-ui/slint-ui-binary-linux-arm64-gnu": "1.10.0"
+      },
+      "_npmOperationalInternal": {
+        "tmp": "tmp/slint-ui_1.10.0_1740746770827_0.6401017791350538",
+        "host": "s3://npm-registry-packages-npm-production"
+      }
     }
   }
 }

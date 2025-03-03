@@ -6,6 +6,7 @@ for (
   const newData = await fetch(`https://registry.npmjs.org/${pkgName}`).then(
     (d) => d.text(),
   );
+  await Deno.mkdir("./registries.org", { recursive: true });
   await Deno.writeTextFile(
     `./registries.org/${fileName}`,
     newData,
