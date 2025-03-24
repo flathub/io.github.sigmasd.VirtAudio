@@ -1,6 +1,6 @@
 app-id: io.github.sigmasd.VirtAudio
 runtime: org.freedesktop.Platform
-runtime-version: "24.08"
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: virtaudio
 finish-args:
@@ -72,8 +72,8 @@ modules:
       - -Dzshcompletiondir=no
     sources:
       - type: archive
-        url: https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.27.1/libinput-1.27.1.tar.gz
-        sha256: f6d623dd8230db337a6457645ebca96b9d4788a56385463bb14b8174910dfe23
+        url: https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.28.0/libinput-1.28.0.tar.gz
+        sha256: d4719ff614835b305f9649899c5c2966f47e9295fa1b3925787d00171f869c21
         x-checker-data:
           type: anitya
           project-id: 5781
@@ -148,10 +148,11 @@ modules:
 
       # Patches for deno compile to work
       # allow runtime loading of native library htps://github.com/napi-rs/napi-rs/issues/2468
-      - patch $DENO_DIR/npm/registry.npmjs.org/slint-ui/1.10.0/rust-module.cjs
-        < rust-module.cjs.patch
+      - patch $DENO_DIR/npm/registry.npmjs.org/slint-ui/1.10.0/rust-module.cjs < rust-module.cjs.patch
       # Compile App
-      - DENORT_BIN=$PWD/denort ./deno compile --no-lock --no-check --output virtaudio-bin --cached-only --allow-all --include ./src/gui.slint --include ./src/client.html ./src/gui.ts
+      - DENORT_BIN=$PWD/denort ./deno compile --no-lock --no-check --output virtaudio-bin
+        --cached-only --allow-all --include ./src/gui.slint --include ./src/client.html
+        ./src/gui.ts
 
       # Install metadata
       - install -D distro/io.github.sigmasd.VirtAudio.desktop -t /app/share/applications/
