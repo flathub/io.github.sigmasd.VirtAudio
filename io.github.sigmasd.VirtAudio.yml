@@ -113,11 +113,9 @@ modules:
       #
       # @slint-ui/slint-ui-binary-linux-x64-gnu
       - mkdir -p $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-x64-gnu
-      - mv ./slint-ui-binary-linux-x64-gnu-registry.json $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-x64-gnu/registry.json
       #
       # @slint-ui/slint-ui-binary-linux-arm64-gnu
       - mkdir -p $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-arm64-gnu
-      - mv ./slint-ui-binary-linux-arm64-gnu-registry.json $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-arm64-gnu/registry.json
       #
       # Prepare the native slint library location
       - |
@@ -128,25 +126,9 @@ modules:
         fi
         tar xf slint-ui-binary-linux-${ARCH}-gnu-1.11.0.tgz
         mv package $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-${ARCH}-gnu/1.11.0
-      #
-      # These next one are not needed we just install its meta file
-      # @slint-ui/slint-ui-binary-darwin-arm64
-      - mkdir -p $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-darwin-arm64
-      - mv ./slint-ui-binary-darwin-arm64-registry.json $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-darwin-arm64/registry.json
-      # @slint-ui/slint-ui-binary-darwin-x64
-      - mkdir -p $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-darwin-x64
-      - mv ./slint-ui-binary-darwin-x64-registry.json $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-darwin-x64/registry.json
-      # @slint-ui/slint-ui-binary-win32-ia32-msvc
-      - mkdir -p $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-win32-ia32-msvc
-      - mv ./slint-ui-binary-win32-ia32-msvc-registry.json $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-win32-ia32-msvc/registry.json
-      # @slint-ui/slint-ui-binary-win32-x64-msvc
-      - mkdir -p $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-win32-x64-msvc
-      - mv ./slint-ui-binary-win32-x64-msvc-registry.json $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-win32-x64-msvc/registry.json
 
-      # Patches for deno compile to work
-      # allow runtime loading of native library htps://github.com/napi-rs/napi-rs/issues/2468
       # Compile App
-      - DENORT_BIN=$PWD/denort ./deno compile --no-lock --no-check --output virtaudio-bin
+      - DENORT_BIN=$PWD/denort ./deno compile --no-check --output virtaudio-bin
         --cached-only --allow-all --include ./src/gui.slint --include ./src/client.html
         ./src/gui.ts
 
@@ -155,8 +137,6 @@ modules:
       - install -D distro/io.github.sigmasd.VirtAudio.metainfo.xml -t /app/share/metainfo/
       - install -D distro/io.github.sigmasd.VirtAudio.svg -t /app/share/icons/hicolor/scalable/apps/
 
-      # Create wrapper script
-      # - install -D virtaudio.sh /app/bin/virtaudio
       - install -D ./virtaudio-bin /app/bin/virtaudio
     cleanup:
       - /app/deno_dir
@@ -165,8 +145,8 @@ modules:
       # app
       - type: archive
         # url: https://github.com/sigmaSd/virtaudio/archive/refs/heads/master.tar.gz
-        url: https://github.com/sigmaSd/virtaudio/archive/refs/tags/0.0.18.tar.gz
-        sha256: 05124e5c4ad75a15aeea0194e0b756930b3b6f93a808fd52ac60b652111a242f
+        url: https://github.com/sigmaSd/virtaudio/archive/refs/tags/0.0.19.tar.gz
+        sha256: 74ddac0f8dae42b065bde9624fc7fc2de173fb701d92d843507af7167f70cc38
 
       # deno
       - type: archive
