@@ -2,38 +2,38 @@
   "name": "@slint-ui/slint-ui-binary-darwin-arm64",
   "dist-tags": {},
   "versions": {
-    "1.10.0": {
+    "1.11.0": {
       "name": "@slint-ui/slint-ui-binary-darwin-arm64",
-      "version": "1.10.0",
-      "_id": "@slint-ui/slint-ui-binary-darwin-arm64@1.10.0",
+      "version": "1.11.0",
+      "_id": "@slint-ui/slint-ui-binary-darwin-arm64@1.11.0",
       "maintainers": [{ "name": "tronical", "email": "npm@slint-ui.com" }],
       "os": ["darwin"],
       "cpu": ["arm64"],
       "dist": {
-        "shasum": "82191a1a395d92d4c045ae2a4bde2a216fbc5850",
-        "tarball": "https://registry.npmjs.org/@slint-ui/slint-ui-binary-darwin-arm64/-/slint-ui-binary-darwin-arm64-1.10.0.tgz",
+        "shasum": "9f6b39db05bec2d5bc2fe594ec79d3d65d100d1c",
+        "tarball": "https://registry.npmjs.org/@slint-ui/slint-ui-binary-darwin-arm64/-/slint-ui-binary-darwin-arm64-1.11.0.tgz",
         "fileCount": 3,
-        "integrity": "sha512-nQBnQ5awvXsIutLh5iOYRUoCz3NAfINPYxwCh7AfmAp9Nu9Um1XiENoTLJV8Ry9ow3B7IQtncatUop29vaaiwA==",
+        "integrity": "sha512-J6LvH9ZJZXl0DAGZKQEAwThwDt42nb84kDCXIpq0fqyViJgq3l/njj8oHWgYWToggBQaRee6D7REW/Fyc/QXxA==",
         "signatures": [
           {
-            "sig": "MEYCIQCWQsoWxRmW5FbBbSfu/X9jackV+7YWg8U1LhCMeqA28gIhAN/Vgos8vInkN8crQeTUzWDJdnWXhd4a4i3H3VZ61JSU",
+            "sig": "MEUCIQDivD0ld0oKzMHwF2Fk22eMb98MPIotcgvNZgvSKaWy5AIgZ85uDYPIQOng/rmuF5RNyrMGJdDepxpJHn82onnd6rI=",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 26208898
+        "unpackedSize": 26487122
       },
       "main": "index.darwin-arm64.node",
-      "_from": "file:api/node/slint-ui-slint-ui-binary-darwin-arm64-1.10.0.tgz",
+      "_from": "file:api/node/slint-ui-slint-ui-binary-darwin-arm64-1.11.0.tgz",
       "_npmUser": { "name": "tronical", "email": "npm@slint-ui.com" },
-      "_resolved": "/home/runner/work/slint/slint/api/node/slint-ui-slint-ui-binary-darwin-arm64-1.10.0.tgz",
-      "_integrity": "sha512-nQBnQ5awvXsIutLh5iOYRUoCz3NAfINPYxwCh7AfmAp9Nu9Um1XiENoTLJV8Ry9ow3B7IQtncatUop29vaaiwA==",
+      "_resolved": "/home/runner/work/slint/slint/api/node/slint-ui-slint-ui-binary-darwin-arm64-1.11.0.tgz",
+      "_integrity": "sha512-J6LvH9ZJZXl0DAGZKQEAwThwDt42nb84kDCXIpq0fqyViJgq3l/njj8oHWgYWToggBQaRee6D7REW/Fyc/QXxA==",
       "_npmVersion": "10.8.2",
       "description": "This is the **aarch64-apple-darwin** binary for `@slint-ui/slint-ui-binary`",
       "directories": {},
-      "_nodeVersion": "20.18.3",
+      "_nodeVersion": "20.19.0",
       "_hasShrinkwrap": false,
       "_npmOperationalInternal": {
-        "tmp": "tmp/slint-ui-binary-darwin-arm64_1.10.0_1740746764106_0.7546051059955945",
+        "tmp": "tmp/slint-ui-binary-darwin-arm64_1.11.0_1745406209094_0.5044119200724326",
         "host": "s3://npm-registry-packages-npm-production"
       }
     }

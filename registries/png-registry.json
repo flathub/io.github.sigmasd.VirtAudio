@@ -5,16 +5,6 @@
     "3.0.1": {
       "name": "@jsquash/png",
       "version": "3.0.1",
-      "main": "index.js",
-      "description": "Wasm png encoder and decoder supporting the browser. Repackaged from Squoosh App.",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jamsinclair/jSquash.git"
-      },
-      "author": {
-        "name": "Jamie Sinclair",
-        "email": "jamsinclairnz+npm@gmail.com"
-      },
       "keywords": [
         "image",
         "optimisation",
@@ -24,48 +14,58 @@
         "webassembly",
         "png"
       ],
-      "license": "Apache-2.0",
-      "scripts": {
-        "clean": "rm -rf dist",
-        "build": "npm run clean && tsc && cp -r codec package.json README.md CHANGELOG.md .npmignore ../../LICENSE dist && rm dist/codec/pkg/.gitignore",
-        "prepublishOnly": "[[ \"$PWD\" == *'/dist' ]] && exit 0 || (echo 'Please run npm publish from the dist directory' && exit 1)"
+      "author": {
+        "name": "Jamie Sinclair",
+        "email": "jamsinclairnz+npm@gmail.com"
       },
-      "devDependencies": { "typescript": "^4.4.4" },
-      "type": "module",
-      "sideEffects": false,
+      "license": "Apache-2.0",
       "_id": "@jsquash/png@3.0.1",
-      "gitHead": "12cc6945365983e2c05b1065ff7152c8af43b22c",
-      "types": "./index.d.ts",
-      "bugs": { "url": "https://github.com/jamsinclair/jSquash/issues" },
+      "maintainers": [
+        { "name": "jamsinclair", "email": "jamsinclairnz+npm@gmail.com" }
+      ],
       "homepage": "https://github.com/jamsinclair/jSquash#readme",
-      "_nodeVersion": "20.12.0",
-      "_npmVersion": "10.5.0",
+      "bugs": { "url": "https://github.com/jamsinclair/jSquash/issues" },
       "dist": {
-        "integrity": "sha512-Bnvv93Y5LL92cuk2r2gpV+9JKuDo2/w7bOODw1iPxk8VARknky0sS1tSDgMosUdhNb4CdMlcCm3TMzTaqa3zZw==",
         "shasum": "dc4c775e2fda3abd5d2f6e7971f6ce0c11b6a952",
         "tarball": "https://registry.npmjs.org/@jsquash/png/-/png-3.0.1.tgz",
         "fileCount": 20,
-        "unpackedSize": 213354,
+        "integrity": "sha512-Bnvv93Y5LL92cuk2r2gpV+9JKuDo2/w7bOODw1iPxk8VARknky0sS1tSDgMosUdhNb4CdMlcCm3TMzTaqa3zZw==",
         "signatures": [
           {
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-            "sig": "MEUCIGFl2KapzODukWsjekPnmnCIxDmFqKbsfprsNlrE8arrAiEA3cnolEDjhWrgb4073jxpD7NuVuWuLa9JjhIjnx12P7k="
+            "sig": "MEUCIGFl2KapzODukWsjekPnmnCIxDmFqKbsfprsNlrE8arrAiEA3cnolEDjhWrgb4073jxpD7NuVuWuLa9JjhIjnx12P7k=",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
           }
-        ]
+        ],
+        "unpackedSize": 213354
+      },
+      "main": "index.js",
+      "type": "module",
+      "types": "./index.d.ts",
+      "gitHead": "12cc6945365983e2c05b1065ff7152c8af43b22c",
+      "scripts": {
+        "build": "npm run clean && tsc && cp -r codec package.json README.md CHANGELOG.md .npmignore ../../LICENSE dist && rm dist/codec/pkg/.gitignore",
+        "clean": "rm -rf dist",
+        "prepublishOnly": "[[ \"$PWD\" == *'/dist' ]] && exit 0 || (echo 'Please run npm publish from the dist directory' && exit 1)"
       },
       "_npmUser": {
         "name": "jamsinclair",
         "email": "jamsinclairnz+npm@gmail.com"
       },
-      "directories": {},
-      "maintainers": [
-        { "name": "jamsinclair", "email": "jamsinclairnz+npm@gmail.com" }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/png_3.0.1_1711954850931_0.6447303453138145"
+      "repository": {
+        "url": "git+https://github.com/jamsinclair/jSquash.git",
+        "type": "git"
       },
-      "_hasShrinkwrap": false
+      "_npmVersion": "10.5.0",
+      "description": "Wasm png encoder and decoder supporting the browser. Repackaged from Squoosh App.",
+      "directories": {},
+      "sideEffects": false,
+      "_nodeVersion": "20.12.0",
+      "_hasShrinkwrap": false,
+      "devDependencies": { "typescript": "^4.4.4" },
+      "_npmOperationalInternal": {
+        "tmp": "tmp/png_3.0.1_1711954850931_0.6447303453138145",
+        "host": "s3://npm-registry-packages"
+      }
     }
   }
 }

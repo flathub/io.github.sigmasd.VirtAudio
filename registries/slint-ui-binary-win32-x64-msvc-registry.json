@@ -2,38 +2,38 @@
   "name": "@slint-ui/slint-ui-binary-win32-x64-msvc",
   "dist-tags": {},
   "versions": {
-    "1.10.0": {
+    "1.11.0": {
       "name": "@slint-ui/slint-ui-binary-win32-x64-msvc",
-      "version": "1.10.0",
-      "_id": "@slint-ui/slint-ui-binary-win32-x64-msvc@1.10.0",
+      "version": "1.11.0",
+      "_id": "@slint-ui/slint-ui-binary-win32-x64-msvc@1.11.0",
       "maintainers": [{ "name": "tronical", "email": "npm@slint-ui.com" }],
       "os": ["win32"],
       "cpu": ["x64"],
       "dist": {
-        "shasum": "a6b875102eb1d0745d3e5462fecc1e01d25c3da9",
-        "tarball": "https://registry.npmjs.org/@slint-ui/slint-ui-binary-win32-x64-msvc/-/slint-ui-binary-win32-x64-msvc-1.10.0.tgz",
+        "shasum": "450a88e01cad3322b1b0cae503d5ac4ec6c458e5",
+        "tarball": "https://registry.npmjs.org/@slint-ui/slint-ui-binary-win32-x64-msvc/-/slint-ui-binary-win32-x64-msvc-1.11.0.tgz",
         "fileCount": 3,
-        "integrity": "sha512-gfKlIsTFtLVEKhlaz/tX9nJ06BSMKSLZmdWe2qGD3mC3I2LGo761euFH0GrfVjxh7iXCCx2R8b2xZzm/1HgyhA==",
+        "integrity": "sha512-qK4nKA4YaYe6RHJAN2zQ9IcZaxsTyIleIegscVu7VkLvnRN0pWrL2GQKCTC9KdBPXR19LIB7ag2OvPM71TGMMA==",
         "signatures": [
           {
-            "sig": "MEUCIFO+dTG05v7dEQ/wDu8PnHj0y0wamnjcw/gYTog3xP8JAiEAmJRj/hJVqx8TorVKwdcgRfLXvQKl2ga2+uNVarkMxbU=",
+            "sig": "MEUCIQCoXcjWqPvf0HEas3b33Hc4gCMBhvZ9Fp7iD8khSoZurwIgYb0K3NMVaWwnB+wkYsdPYqyVBaxC1k5iKhrRWRTjnKk=",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 26995545
+        "unpackedSize": 27129689
       },
       "main": "index.win32-x64-msvc.node",
-      "_from": "file:api/node/slint-ui-slint-ui-binary-win32-x64-msvc-1.10.0.tgz",
+      "_from": "file:api/node/slint-ui-slint-ui-binary-win32-x64-msvc-1.11.0.tgz",
       "_npmUser": { "name": "tronical", "email": "npm@slint-ui.com" },
-      "_resolved": "/home/runner/work/slint/slint/api/node/slint-ui-slint-ui-binary-win32-x64-msvc-1.10.0.tgz",
-      "_integrity": "sha512-gfKlIsTFtLVEKhlaz/tX9nJ06BSMKSLZmdWe2qGD3mC3I2LGo761euFH0GrfVjxh7iXCCx2R8b2xZzm/1HgyhA==",
+      "_resolved": "/home/runner/work/slint/slint/api/node/slint-ui-slint-ui-binary-win32-x64-msvc-1.11.0.tgz",
+      "_integrity": "sha512-qK4nKA4YaYe6RHJAN2zQ9IcZaxsTyIleIegscVu7VkLvnRN0pWrL2GQKCTC9KdBPXR19LIB7ag2OvPM71TGMMA==",
       "_npmVersion": "10.8.2",
       "description": "This is the **x86_64-pc-windows-msvc** binary for `@slint-ui/slint-ui-binary`",
       "directories": {},
-      "_nodeVersion": "20.18.3",
+      "_nodeVersion": "20.19.0",
       "_hasShrinkwrap": false,
       "_npmOperationalInternal": {
-        "tmp": "tmp/slint-ui-binary-win32-x64-msvc_1.10.0_1740746768312_0.7557512895301559",
+        "tmp": "tmp/slint-ui-binary-win32-x64-msvc_1.11.0_1745406212668_0.543785877701868",
         "host": "s3://npm-registry-packages-npm-production"
       }
     }

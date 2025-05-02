@@ -2,39 +2,39 @@
   "name": "@slint-ui/slint-ui-binary-linux-x64-gnu",
   "dist-tags": {},
   "versions": {
-    "1.10.0": {
+    "1.11.0": {
       "name": "@slint-ui/slint-ui-binary-linux-x64-gnu",
-      "version": "1.10.0",
-      "_id": "@slint-ui/slint-ui-binary-linux-x64-gnu@1.10.0",
+      "version": "1.11.0",
+      "_id": "@slint-ui/slint-ui-binary-linux-x64-gnu@1.11.0",
       "maintainers": [{ "name": "tronical", "email": "npm@slint-ui.com" }],
       "os": ["linux"],
       "cpu": ["x64"],
       "dist": {
-        "shasum": "4c726c309a3c7f3bb494a5656cb6a1b703a29a1c",
-        "tarball": "https://registry.npmjs.org/@slint-ui/slint-ui-binary-linux-x64-gnu/-/slint-ui-binary-linux-x64-gnu-1.10.0.tgz",
+        "shasum": "9d49ac75acbdaf80cb45e5566c54d6f2687ea705",
+        "tarball": "https://registry.npmjs.org/@slint-ui/slint-ui-binary-linux-x64-gnu/-/slint-ui-binary-linux-x64-gnu-1.11.0.tgz",
         "fileCount": 3,
-        "integrity": "sha512-hJrtoIniHull8nOh/3fl0hBENirI6z0Q3Ef4sDq7xGnWiHIWWNq+RCCcknyjDxPkYwy6QVldGRnVcYdLg6xBUA==",
+        "integrity": "sha512-ZhGkGrfelmlzPorbBF5YCtNgFvJth4Suz3LH8BY0aypH3VPT8Q/TqbpbN75KvCAtLmj4kayj6+APHPkiR1Zs1w==",
         "signatures": [
           {
-            "sig": "MEUCIQC2shi4YsIVeYZmWDXCgNhyc9KI/x/L1MA15q9XlCJ6TAIgVkcunfnpdYrse4Y5jr4hjBK7UrZA1RqoYi1gzZHZAzc=",
+            "sig": "MEYCIQCfWQncz8ArHfjcjPowimlNOu6UndpTlXSq323O39AfGwIhAI81GBvQ8RuZMal6ZEz/rc1yM6dVkmHHppIq2i8Yh20m",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 35448780
+        "unpackedSize": 35850236
       },
       "libc": ["glibc"],
       "main": "index.linux-x64-gnu.node",
-      "_from": "file:api/node/slint-ui-slint-ui-binary-linux-x64-gnu-1.10.0.tgz",
+      "_from": "file:api/node/slint-ui-slint-ui-binary-linux-x64-gnu-1.11.0.tgz",
       "_npmUser": { "name": "tronical", "email": "npm@slint-ui.com" },
-      "_resolved": "/home/runner/work/slint/slint/api/node/slint-ui-slint-ui-binary-linux-x64-gnu-1.10.0.tgz",
-      "_integrity": "sha512-hJrtoIniHull8nOh/3fl0hBENirI6z0Q3Ef4sDq7xGnWiHIWWNq+RCCcknyjDxPkYwy6QVldGRnVcYdLg6xBUA==",
+      "_resolved": "/home/runner/work/slint/slint/api/node/slint-ui-slint-ui-binary-linux-x64-gnu-1.11.0.tgz",
+      "_integrity": "sha512-ZhGkGrfelmlzPorbBF5YCtNgFvJth4Suz3LH8BY0aypH3VPT8Q/TqbpbN75KvCAtLmj4kayj6+APHPkiR1Zs1w==",
       "_npmVersion": "10.8.2",
       "description": "This is the **x86_64-unknown-linux-gnu** binary for `@slint-ui/slint-ui-binary`",
       "directories": {},
-      "_nodeVersion": "20.18.3",
+      "_nodeVersion": "20.19.0",
       "_hasShrinkwrap": false,
       "_npmOperationalInternal": {
-        "tmp": "tmp/slint-ui-binary-linux-x64-gnu_1.10.0_1740746752099_0.8805642545787675",
+        "tmp": "tmp/slint-ui-binary-linux-x64-gnu_1.11.0_1745406198060_0.8084203502778098",
         "host": "s3://npm-registry-packages-npm-production"
       }
     }
