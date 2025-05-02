@@ -190,7 +190,7 @@ modules:
 
       - type: file
         url: https://registry.npmjs.org/@slint-ui/slint-ui-binary-linux-arm64-gnu/-/slint-ui-binary-linux-arm64-gnu-1.11.0.tgz
-        sha256: dc78b56204871155decd04715cc6d55671d7294b42bdeaf1fb2f289924a27c17
+        sha256: 108c2500187831f455812c1998c4b95ed5d2d83629f2584cb80b082174170372
         only-arches:
           - aarch64
 
