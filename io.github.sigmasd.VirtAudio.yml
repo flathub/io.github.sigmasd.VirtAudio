@@ -111,12 +111,6 @@ modules:
       - mv package $DENO_DIR/npm/registry.npmjs.org/slint-ui/1.11.0
       - mv ./slint-ui-registry.json $DENO_DIR/npm/registry.npmjs.org/slint-ui/registry.json
       #
-      # @slint-ui/slint-ui-binary-linux-x64-gnu
-      - mkdir -p $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-x64-gnu
-      #
-      # @slint-ui/slint-ui-binary-linux-arm64-gnu
-      - mkdir -p $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-arm64-gnu
-      #
       # Prepare the native slint library location
       - |
         if [ "$(uname -m)" = "aarch64" ]; then
@@ -125,6 +119,7 @@ modules:
           ARCH=x64
         fi
         tar xf slint-ui-binary-linux-${ARCH}-gnu-1.11.0.tgz
+        mkdir -p $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-${ARCH}-gnu
         mv package $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-${ARCH}-gnu/1.11.0
 
       # Compile App
