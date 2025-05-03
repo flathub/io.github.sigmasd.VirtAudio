@@ -1,6 +1,6 @@
 app-id: io.github.sigmasd.VirtAudio
 runtime: org.freedesktop.Platform
-runtime-version: "24.08"
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: virtaudio
 finish-args:
@@ -29,8 +29,8 @@ modules:
       - -Ddocumentation=disabled
     sources:
       - type: archive
-        url: https://www.freedesktop.org/software/libevdev/libevdev-1.13.3.tar.xz
-        sha256: abf1aace86208eebdd5d3550ffded4c8d73bb405b796d51c389c9d0604cbcfbf
+        url: https://www.freedesktop.org/software/libevdev/libevdev-1.13.4.tar.xz
+        sha256: f00ab8d42ad8b905296fab67e13b871f1a424839331516642100f82ad88127cd
         x-checker-data:
           type: anitya
           project-id: 20540
@@ -128,9 +128,8 @@ modules:
         mv package $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-${ARCH}-gnu/1.11.0
 
       # Compile App
-      - DENORT_BIN=$PWD/denort ./deno compile --no-check --output virtaudio-bin
-        --cached-only --allow-all --include ./src/gui.slint --include ./src/client.html
-        ./src/gui.ts
+      - DENORT_BIN=$PWD/denort ./deno compile --no-check --output virtaudio-bin --cached-only
+        --allow-all --include ./src/gui.slint --include ./src/client.html ./src/gui.ts
 
       # Install metadata
       - install -D distro/io.github.sigmasd.VirtAudio.desktop -t /app/share/applications/
