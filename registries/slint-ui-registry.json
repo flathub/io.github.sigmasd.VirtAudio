@@ -2,9 +2,9 @@
   "name": "slint-ui",
   "dist-tags": {},
   "versions": {
-    "1.10.0": {
+    "1.11.0": {
       "name": "slint-ui",
-      "version": "1.10.0",
+      "version": "1.11.0",
       "keywords": [
         "GUI",
         "UI",
@@ -15,7 +15,7 @@
         "embedded"
       ],
       "license": "SEE LICENSE IN LICENSE.md",
-      "_id": "slint-ui@1.10.0",
+      "_id": "slint-ui@1.11.0",
       "maintainers": [{ "name": "tronical", "email": "npm@slint-ui.com" }],
       "homepage": "https://github.com/slint-ui/slint",
       "bugs": { "url": "https://github.com/slint-ui/slint/issues" },
@@ -29,20 +29,20 @@
         "workerThreads": false
       },
       "dist": {
-        "shasum": "2c74c25ad3d87e8bf25217ab6795e3b9801ca58a",
-        "tarball": "https://registry.npmjs.org/slint-ui/-/slint-ui-1.10.0.tgz",
+        "shasum": "c2f45059849c7cf587de16d9f3ea92e51468dbb8",
+        "tarball": "https://registry.npmjs.org/slint-ui/-/slint-ui-1.11.0.tgz",
         "fileCount": 51,
-        "integrity": "sha512-+Z/0uBZDGAoF6u/LPe0kDk669C4gR/uIHthxrs1Q29FKdoMT6x9I257ZujTjYct3skMvJ148r4J6TuGRtvevwQ==",
+        "integrity": "sha512-Sup0aBv9hWlYB6Ncs04za0clYZIg6kx/r25sfmaIl7nKO6pCGu8X5M8A2XSe8DZn3pPHlzF8Gqu0CNALdDLaFA==",
         "signatures": [
           {
-            "sig": "MEQCIGbrIeKZDgEA3wlYf8U6RUW38CjMxIfG6yxVk6bPeWUNAiB4HHV6xVuP7WPwvjagwnkcMwIj9yD9CWmIhcbpoWEXgw==",
+            "sig": "MEUCIC/AlWNoTJ/jxbG9BW9X63BZMTbvNk/pmOXRgu6pLF1RAiEA9TGyEDjOKkWKbB1gVFqdzJYsPayoR7Hv0cL9fTx70xw=",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 426114
+        "unpackedSize": 426258
       },
       "main": "dist/index.js",
-      "_from": "file:api/node/slint-ui-1.10.0.tgz",
+      "_from": "file:api/node/slint-ui-1.11.0.tgz",
       "types": "dist/index.d.ts",
       "engines": { "node": ">= 10" },
       "scripts": {
@@ -62,8 +62,8 @@
         "build:testing": "napi build --platform --js rust-module.cjs --dts rust-module.d.cts -c binaries.json --features testing && pnpm compile"
       },
       "_npmUser": { "name": "tronical", "email": "npm@slint-ui.com" },
-      "_resolved": "/home/runner/work/slint/slint/api/node/slint-ui-1.10.0.tgz",
-      "_integrity": "sha512-+Z/0uBZDGAoF6u/LPe0kDk669C4gR/uIHthxrs1Q29FKdoMT6x9I257ZujTjYct3skMvJ148r4J6TuGRtvevwQ==",
+      "_resolved": "/home/runner/work/slint/slint/api/node/slint-ui-1.11.0.tgz",
+      "_integrity": "sha512-Sup0aBv9hWlYB6Ncs04za0clYZIg6kx/r25sfmaIl7nKO6pCGu8X5M8A2XSe8DZn3pPHlzF8Gqu0CNALdDLaFA==",
       "repository": {
         "url": "git+https://github.com/slint-ui/slint.git",
         "type": "git"
@@ -71,14 +71,14 @@
       "_npmVersion": "10.8.2",
       "description": "Slint is a declarative GUI toolkit to build native user interfaces for desktop and embedded applications.",
       "directories": {},
-      "_nodeVersion": "20.18.3",
+      "_nodeVersion": "20.19.0",
       "dependencies": { "@napi-rs/cli": "2.18.4" },
       "_hasShrinkwrap": false,
       "devDependencies": {
         "ava": "6.2.0",
         "jimp": "1.6.0",
-        "typedoc": "0.27.8",
-        "typescript": "5.7.3",
+        "typedoc": "0.28.2",
+        "typescript": "5.8.3",
         "@types/node": "20.16.10",
         "@biomejs/biome": "1.9.4",
         "@ava/typescript": "5.0.0",
@@ -86,14 +86,14 @@
         "@types/capture-console": "1.0.5"
       },
       "optionalDependencies": {
-        "@slint-ui/slint-ui-binary-darwin-x64": "1.10.0",
-        "@slint-ui/slint-ui-binary-darwin-arm64": "1.10.0",
-        "@slint-ui/slint-ui-binary-linux-x64-gnu": "1.10.0",
-        "@slint-ui/slint-ui-binary-win32-x64-msvc": "1.10.0",
-        "@slint-ui/slint-ui-binary-linux-arm64-gnu": "1.10.0"
+        "@slint-ui/slint-ui-binary-darwin-x64": "1.11.0",
+        "@slint-ui/slint-ui-binary-darwin-arm64": "1.11.0",
+        "@slint-ui/slint-ui-binary-linux-x64-gnu": "1.11.0",
+        "@slint-ui/slint-ui-binary-win32-x64-msvc": "1.11.0",
+        "@slint-ui/slint-ui-binary-linux-arm64-gnu": "1.11.0"
       },
       "_npmOperationalInternal": {
-        "tmp": "tmp/slint-ui_1.10.0_1740746770827_0.6401017791350538",
+        "tmp": "tmp/slint-ui_1.11.0_1745406214682_0.05410041818239186",
         "host": "s3://npm-registry-packages-npm-production"
       }
     }

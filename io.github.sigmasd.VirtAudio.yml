@@ -1,6 +1,6 @@
 app-id: io.github.sigmasd.VirtAudio
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: "24.08"
 sdk: org.freedesktop.Sdk
 command: virtaudio
 finish-args:
@@ -107,17 +107,15 @@ modules:
       #
       # slint-ui
       - mkdir -p $DENO_DIR/npm/registry.npmjs.org/slint-ui
-      - tar xf slint-ui-1.10.0.tgz
-      - mv package $DENO_DIR/npm/registry.npmjs.org/slint-ui/1.10.0
+      - tar xf slint-ui-1.11.0.tgz
+      - mv package $DENO_DIR/npm/registry.npmjs.org/slint-ui/1.11.0
       - mv ./slint-ui-registry.json $DENO_DIR/npm/registry.npmjs.org/slint-ui/registry.json
       #
       # @slint-ui/slint-ui-binary-linux-x64-gnu
       - mkdir -p $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-x64-gnu
-      - mv ./slint-ui-binary-linux-x64-gnu-registry.json $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-x64-gnu/registry.json
       #
       # @slint-ui/slint-ui-binary-linux-arm64-gnu
       - mkdir -p $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-arm64-gnu
-      - mv ./slint-ui-binary-linux-arm64-gnu-registry.json $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-arm64-gnu/registry.json
       #
       # Prepare the native slint library location
       - |
@@ -126,31 +124,11 @@ modules:
         elif [ "$(uname -m)" = "x86_64" ]; then
           ARCH=x64
         fi
-        tar xf slint-ui-binary-linux-${ARCH}-gnu-1.10.0.tgz
-        mv package $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-${ARCH}-gnu/1.10.0
-        # We point the app to the library location at runtime, it can't be embedded in the compiled executable because deno won't be able to dlopen it (current limitation)
-        mkdir -p /app/lib
-        mv $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-${ARCH}-gnu/1.10.0/index.linux-${ARCH}-gnu.node /app/lib/index.linux-gnu.node
-      #
-      # These next one are not needed we just install its meta file
-      # @slint-ui/slint-ui-binary-darwin-arm64
-      - mkdir -p $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-darwin-arm64
-      - mv ./slint-ui-binary-darwin-arm64-registry.json $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-darwin-arm64/registry.json
-      # @slint-ui/slint-ui-binary-darwin-x64
-      - mkdir -p $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-darwin-x64
-      - mv ./slint-ui-binary-darwin-x64-registry.json $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-darwin-x64/registry.json
-      # @slint-ui/slint-ui-binary-win32-ia32-msvc
-      - mkdir -p $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-win32-ia32-msvc
-      - mv ./slint-ui-binary-win32-ia32-msvc-registry.json $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-win32-ia32-msvc/registry.json
-      # @slint-ui/slint-ui-binary-win32-x64-msvc
-      - mkdir -p $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-win32-x64-msvc
-      - mv ./slint-ui-binary-win32-x64-msvc-registry.json $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-win32-x64-msvc/registry.json
+        tar xf slint-ui-binary-linux-${ARCH}-gnu-1.11.0.tgz
+        mv package $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-${ARCH}-gnu/1.11.0
 
-      # Patches for deno compile to work
-      # allow runtime loading of native library htps://github.com/napi-rs/napi-rs/issues/2468
-      - patch $DENO_DIR/npm/registry.npmjs.org/slint-ui/1.10.0/rust-module.cjs < rust-module.cjs.patch
       # Compile App
-      - DENORT_BIN=$PWD/denort ./deno compile --no-lock --no-check --output virtaudio-bin
+      - DENORT_BIN=$PWD/denort ./deno compile --no-check --output virtaudio-bin
         --cached-only --allow-all --include ./src/gui.slint --include ./src/client.html
         ./src/gui.ts
 
@@ -159,9 +137,7 @@ modules:
       - install -D distro/io.github.sigmasd.VirtAudio.metainfo.xml -t /app/share/metainfo/
       - install -D distro/io.github.sigmasd.VirtAudio.svg -t /app/share/icons/hicolor/scalable/apps/
 
-      # Create wrapper script
-      - install -D virtaudio.sh /app/bin/virtaudio
-      - install -D ./virtaudio-bin /app/bin/virtaudio-bin
+      - install -D ./virtaudio-bin /app/bin/virtaudio
     cleanup:
       - /app/deno_dir
 
@@ -169,28 +145,28 @@ modules:
       # app
       - type: archive
         # url: https://github.com/sigmaSd/virtaudio/archive/refs/heads/master.tar.gz
-        url: https://github.com/sigmaSd/virtaudio/archive/refs/tags/0.0.17.tar.gz
-        sha256: b39af940807c7bced439b38cea0197638a07942f7de809bd51faedde320dc616
+        url: https://github.com/sigmaSd/virtaudio/archive/refs/tags/0.0.19.tar.gz
+        sha256: 74ddac0f8dae42b065bde9624fc7fc2de173fb701d92d843507af7167f70cc38
 
       # deno
       - type: archive
-        url: https://github.com/denoland/deno/releases/download/v2.1.7/deno-x86_64-unknown-linux-gnu.zip
-        sha256: 8ea47ace85a2daadb60165d2aa519e11aef023d74441a24c4dc1d106dffdd19b
+        url: https://github.com/denoland/deno/releases/download/v2.3.1/deno-x86_64-unknown-linux-gnu.zip
+        sha256: b2920265e633215959b09a32b67f46c93362842bbfd27c96e8acc2d24b66f563
         only-arches:
           - x86_64
       - type: archive
-        url: https://github.com/denoland/deno/releases/download/v2.1.7/denort-x86_64-unknown-linux-gnu.zip
-        sha256: f00adc493667d5e414165d102d537023109dbd35d62b254566caa1485e0d2bd0
+        url: https://github.com/denoland/deno/releases/download/v2.3.1/denort-x86_64-unknown-linux-gnu.zip
+        sha256: 611c72c6e3de743c3f04eeb5f43cfb94dee7a232c7142d63f1967478bd220d11
         only-arches:
           - x86_64
       - type: archive
-        url: https://github.com/denoland/deno/releases/download/v2.1.7/deno-aarch64-unknown-linux-gnu.zip
-        sha256: fb37f230b55898660807247ea28a37afead40bc3713e2ee022a5c1e9476ac9aa
+        url: https://github.com/denoland/deno/releases/download/v2.3.1/deno-aarch64-unknown-linux-gnu.zip
+        sha256: 3771ede34037694591846166f6211e7a8ab5cd77a1e7143e637d4457e8708dc7
         only-arches:
           - aarch64
       - type: archive
-        url: https://github.com/denoland/deno/releases/download/v2.1.7/denort-aarch64-unknown-linux-gnu.zip
-        sha256: 0773c54ab7a76658a6d32067cec41d87f2845f1eaca1a057a35ad2590028e8e9
+        url: https://github.com/denoland/deno/releases/download/v2.3.1/denort-aarch64-unknown-linux-gnu.zip
+        sha256: bec92b837f50d0330a532a53fcbcf8383eed3d5e4575d893cca59c50d4724c1f
         only-arches:
           - aarch64
 
@@ -203,28 +179,20 @@ modules:
         sha256: 7529b1f4c0e78c4acad1a54eed18633a1b6f5188f46e8e37389b84acf7c31c1d
 
       - type: file
-        url: https://registry.npmjs.org/slint-ui/-/slint-ui-1.10.0.tgz
-        sha256: bb52bc55f84d6e2c23802aab387a9d5e1779882072cfa7c5556045b136ab9e35
+        url: https://registry.npmjs.org/slint-ui/-/slint-ui-1.11.0.tgz
+        sha256: 5be0e06380a5be55b47e650bdb4f9c50fae7cdfbfc9220a28958b073176ae833
 
       - type: file
-        url: https://registry.npmjs.org/@slint-ui/slint-ui-binary-linux-x64-gnu/-/slint-ui-binary-linux-x64-gnu-1.10.0.tgz
-        sha256: 60a524a847f9dd692634935cc291383bf6a4e4fbf61ca8aa0100bcd282179b06
+        url: https://registry.npmjs.org/@slint-ui/slint-ui-binary-linux-x64-gnu/-/slint-ui-binary-linux-x64-gnu-1.11.0.tgz
+        sha256: 8635467a169fa2d4547359333597108dbc8f67d1b76285cbbb438f0d481a0629
         only-arches:
           - x86_64
 
       - type: file
-        url: https://registry.npmjs.org/@slint-ui/slint-ui-binary-linux-arm64-gnu/-/slint-ui-binary-linux-arm64-gnu-1.10.0.tgz
-        sha256: dc78b56204871155decd04715cc6d55671d7294b42bdeaf1fb2f289924a27c17
+        url: https://registry.npmjs.org/@slint-ui/slint-ui-binary-linux-arm64-gnu/-/slint-ui-binary-linux-arm64-gnu-1.11.0.tgz
+        sha256: 108c2500187831f455812c1998c4b95ed5d2d83629f2584cb80b082174170372
         only-arches:
           - aarch64
-
-      - type: script
-        dest-filename: virtaudio.sh
-        commands:
-          - NAPI_RS_NATIVE_LIBRARY_PATH=/app/lib/index.linux-gnu.node exec virtaudio-bin
-
-      - type: file
-        path: ./rust-module.cjs.patch
 
       # dependencies metadata
       - type: dir
