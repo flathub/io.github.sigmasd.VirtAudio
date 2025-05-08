@@ -1,6 +1,6 @@
 app-id: io.github.sigmasd.VirtAudio
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: "24.08"
 sdk: org.freedesktop.Sdk
 command: virtaudio
 finish-args:
@@ -89,41 +89,12 @@ modules:
     buildsystem: simple
     build-options:
       env:
-        DENO_DIR: /app/deno_dir
+        DENO_DIR: deno_dir
+        DENORT_BIN: denort
     build-commands:
-      # Prepare dependencies
-      #
-      # @jsquash/png 3.0.1
-      - mkdir -p $DENO_DIR/npm/registry.npmjs.org/@jsquash/png
-      - tar xf png-3.0.1.tgz
-      - mv package $DENO_DIR/npm/registry.npmjs.org/@jsquash/png/3.0.1
-      - mv ./png-registry.json $DENO_DIR/npm/registry.npmjs.org/@jsquash/png/registry.json
-      #
-      # @napi-rs/cli 2.18.4
-      - mkdir -p $DENO_DIR/npm/registry.npmjs.org/@napi-rs/cli
-      - tar xf cli-2.18.4.tgz
-      - mv package $DENO_DIR/npm/registry.npmjs.org/@napi-rs/cli/2.18.4/
-      - mv ./cli-registry.json $DENO_DIR/npm/registry.npmjs.org/@napi-rs/cli/registry.json
-      #
-      # slint-ui
-      - mkdir -p $DENO_DIR/npm/registry.npmjs.org/slint-ui
-      - tar xf slint-ui-1.11.0.tgz
-      - mv package $DENO_DIR/npm/registry.npmjs.org/slint-ui/1.11.0
-      - mv ./slint-ui-registry.json $DENO_DIR/npm/registry.npmjs.org/slint-ui/registry.json
-      #
-      # Prepare the native slint library location
-      - |
-        if [ "$(uname -m)" = "aarch64" ]; then
-          ARCH=arm64
-        elif [ "$(uname -m)" = "x86_64" ]; then
-          ARCH=x64
-        fi
-        tar xf slint-ui-binary-linux-${ARCH}-gnu-1.11.0.tgz
-        mkdir -p $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-${ARCH}-gnu
-        mv package $DENO_DIR/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-${ARCH}-gnu/1.11.0
-
       # Compile App
-      - DENORT_BIN=$PWD/denort ./deno compile --no-check --output virtaudio-bin --cached-only
+      - mv vendor src/
+      - ./deno compile --vendor --no-check --output virtaudio-bin --cached-only
         --allow-all --include ./src/gui.slint --include ./src/client.html ./src/gui.ts
 
       # Install metadata
@@ -136,11 +107,12 @@ modules:
       - /app/deno_dir
 
     sources:
+      - deno-sources.json
       # app
       - type: archive
         # url: https://github.com/sigmaSd/virtaudio/archive/refs/heads/master.tar.gz
-        url: https://github.com/sigmaSd/virtaudio/archive/refs/tags/0.0.19.tar.gz
-        sha256: 74ddac0f8dae42b065bde9624fc7fc2de173fb701d92d843507af7167f70cc38
+        url: https://github.com/sigmaSd/virtaudio/archive/refs/tags/0.0.20.tar.gz
+        sha256: e048eb7f47aae05c50e371bffa0a70a916bf12c7bb2461e160cf2bc3f5e9911f
 
       # deno
       - type: archive
@@ -163,31 +135,3 @@ modules:
         sha256: bec92b837f50d0330a532a53fcbcf8383eed3d5e4575d893cca59c50d4724c1f
         only-arches:
           - aarch64
-
-      - type: file
-        url: https://registry.npmjs.org/@napi-rs/cli/-/cli-2.18.4.tgz
-        sha256: 9dad5aa440d89b197e88bec6c32f552bc99eaee3117bf263c3c57bbfe8b3c5fa
-
-      - type: file
-        url: https://registry.npmjs.org/@jsquash/png/-/png-3.0.1.tgz
-        sha256: 7529b1f4c0e78c4acad1a54eed18633a1b6f5188f46e8e37389b84acf7c31c1d
-
-      - type: file
-        url: https://registry.npmjs.org/slint-ui/-/slint-ui-1.11.0.tgz
-        sha256: 5be0e06380a5be55b47e650bdb4f9c50fae7cdfbfc9220a28958b073176ae833
-
-      - type: file
-        url: https://registry.npmjs.org/@slint-ui/slint-ui-binary-linux-x64-gnu/-/slint-ui-binary-linux-x64-gnu-1.11.0.tgz
-        sha256: 8635467a169fa2d4547359333597108dbc8f67d1b76285cbbb438f0d481a0629
-        only-arches:
-          - x86_64
-
-      - type: file
-        url: https://registry.npmjs.org/@slint-ui/slint-ui-binary-linux-arm64-gnu/-/slint-ui-binary-linux-arm64-gnu-1.11.0.tgz
-        sha256: 108c2500187831f455812c1998c4b95ed5d2d83629f2584cb80b082174170372
-        only-arches:
-          - aarch64
-
-      # dependencies metadata
-      - type: dir
-        path: registries
