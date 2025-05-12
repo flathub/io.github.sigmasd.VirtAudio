@@ -36,6 +36,13 @@
   },
   {
     "type": "file",
+    "url": "https://jsr.io/@sigma/deno-compile-extra/0.11.0/deno.json",
+    "sha256": "f3be267932c40c60d60ac17366b59d1e252e3d183c43809a5697f16c30bb8490",
+    "dest": "vendor/jsr.io/@sigma/deno-compile-extra/0.11.0",
+    "dest-filename": "deno.json"
+  },
+  {
+    "type": "file",
     "url": "https://jsr.io/@sigmasd/qrpng/meta.json",
     "sha256": "9bf3226df3344829d32431e8131bd6142372d1b3076ebc5d0b7f21e292d62bee",
     "dest": "vendor/jsr.io/@sigmasd/qrpng",
@@ -68,6 +75,13 @@
     "sha256": "972d42c57b67df0365036d79472ac6295a288627aa23845a62666ccea4b18241",
     "dest": "vendor/jsr.io/@sigmasd/qrpng/0.1.3/lib",
     "dest-filename": "rs_lib.generated.d.ts"
+  },
+  {
+    "type": "file",
+    "url": "https://jsr.io/@sigmasd/qrpng/0.1.3/deno.json",
+    "sha256": "e59c43e6a75d94c55eb7cb89d150552f85523cc46065239a9312400d289c88c8",
+    "dest": "vendor/jsr.io/@sigmasd/qrpng/0.1.3",
+    "dest-filename": "deno.json"
   },
   {
     "type": "file",
@@ -729,8 +743,14 @@
   },
   {
     "type": "file",
-    "url": "https://registry.npmjs.org/@jsquash/png",
-    "sha256": "96e5f56978b2e37743050fb292537f601f8707a1fbf8b5eb29bbc574bb0911e4",
+    "url": "https://jsr.io/@std/path/1.0.8/deno.json",
+    "sha256": "c6d989649f28dff80a70ee72c41fec1fe7fb7227597f379c28664b63cc44e114",
+    "dest": "vendor/jsr.io/@std/path/1.0.8",
+    "dest-filename": "deno.json"
+  },
+  {
+    "type": "inline",
+    "contents": "{\"name\":\"@jsquash/png\",\"dist-tags\":{},\"versions\":{\"3.0.1\":{\"name\":\"@jsquash/png\",\"version\":\"3.0.1\",\"keywords\":[\"image\",\"optimisation\",\"optimization\",\"squoosh\",\"wasm\",\"webassembly\",\"png\"],\"author\":{\"name\":\"Jamie Sinclair\",\"email\":\"jamsinclairnz+npm@gmail.com\"},\"license\":\"Apache-2.0\",\"_id\":\"@jsquash/png@3.0.1\",\"maintainers\":[{\"name\":\"jamsinclair\",\"email\":\"jamsinclairnz+npm@gmail.com\"}],\"homepage\":\"https://github.com/jamsinclair/jSquash#readme\",\"bugs\":{\"url\":\"https://github.com/jamsinclair/jSquash/issues\"},\"dist\":{\"shasum\":\"dc4c775e2fda3abd5d2f6e7971f6ce0c11b6a952\",\"tarball\":\"https://registry.npmjs.org/@jsquash/png/-/png-3.0.1.tgz\",\"fileCount\":20,\"integrity\":\"sha512-Bnvv93Y5LL92cuk2r2gpV+9JKuDo2/w7bOODw1iPxk8VARknky0sS1tSDgMosUdhNb4CdMlcCm3TMzTaqa3zZw==\",\"signatures\":[{\"sig\":\"MEUCIGFl2KapzODukWsjekPnmnCIxDmFqKbsfprsNlrE8arrAiEA3cnolEDjhWrgb4073jxpD7NuVuWuLa9JjhIjnx12P7k=\",\"keyid\":\"SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA\"}],\"unpackedSize\":213354},\"main\":\"index.js\",\"type\":\"module\",\"types\":\"./index.d.ts\",\"gitHead\":\"12cc6945365983e2c05b1065ff7152c8af43b22c\",\"scripts\":{\"build\":\"npm run clean && tsc && cp -r codec package.json README.md CHANGELOG.md .npmignore ../../LICENSE dist && rm dist/codec/pkg/.gitignore\",\"clean\":\"rm -rf dist\",\"prepublishOnly\":\"[[ \\\"$PWD\\\" == *'/dist' ]] && exit 0 || (echo 'Please run npm publish from the dist directory' && exit 1)\"},\"_npmUser\":{\"name\":\"jamsinclair\",\"email\":\"jamsinclairnz+npm@gmail.com\"},\"repository\":{\"url\":\"git+https://github.com/jamsinclair/jSquash.git\",\"type\":\"git\"},\"_npmVersion\":\"10.5.0\",\"description\":\"Wasm png encoder and decoder supporting the browser. Repackaged from Squoosh App.\",\"directories\":{},\"sideEffects\":false,\"_nodeVersion\":\"20.12.0\",\"_hasShrinkwrap\":false,\"devDependencies\":{\"typescript\":\"^4.4.4\"},\"_npmOperationalInternal\":{\"tmp\":\"tmp/png_3.0.1_1711954850931_0.6447303453138145\",\"host\":\"s3://npm-registry-packages\"}}}}",
     "dest": "deno_dir/npm/registry.npmjs.org/@jsquash/png",
     "dest-filename": "registry.json"
   },
@@ -742,9 +762,8 @@
     "dest": "deno_dir/npm/registry.npmjs.org/@jsquash/png/3.0.1"
   },
   {
-    "type": "file",
-    "url": "https://registry.npmjs.org/@napi-rs/cli",
-    "sha256": "632d15bf6b31b8bf217f2e2d2839f2e2d7a7a09e346928cebf05436e031cdc08",
+    "type": "inline",
+    "contents": "{\"name\":\"@napi-rs/cli\",\"dist-tags\":{},\"versions\":{\"2.18.4\":{\"name\":\"@napi-rs/cli\",\"version\":\"2.18.4\",\"keywords\":[\"cli\",\"rust\",\"napi\",\"n-api\",\"neon\"],\"author\":{\"name\":\"LongYinan\",\"email\":\"lynweklm@gmail.com\"},\"license\":\"MIT\",\"_id\":\"@napi-rs/cli@2.18.4\",\"maintainers\":[{\"name\":\"LongYinan\",\"email\":\"lynweklm@gmail.com\"}],\"homepage\":\"https://github.com/napi-rs/napi-rs\",\"bugs\":{\"url\":\"https://github.com/napi-rs/napi-rs/issues\"},\"bin\":{\"napi\":\"scripts/index.js\"},\"dist\":{\"shasum\":\"12bebfb7995902fa7ab43cc0b155a7f5a2caa873\",\"tarball\":\"https://registry.npmjs.org/@napi-rs/cli/-/cli-2.18.4.tgz\",\"fileCount\":4,\"integrity\":\"sha512-SgJeA4df9DE2iAEpr3M2H0OKl/yjtg1BnRI5/JyowS71tUWhrfSu2LT0V3vlHET+g1hBVlrO60PmEXwUEKp8Mg==\",\"signatures\":[{\"sig\":\"MEUCIFyreHhNeXfWVSdVD2iOy1FgJOKGmXsq7mZLtqSB6MQNAiEA5pI4ckt0fgKNV7SwXauq9N1r9NU+P7mh9EeeHjIrH3k=\",\"keyid\":\"SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA\"}],\"attestations\":{\"url\":\"https://registry.npmjs.org/-/npm/v1/attestations/@napi-rs%2fcli@2.18.4\",\"provenance\":{\"predicateType\":\"https://slsa.dev/provenance/v0.2\"}},\"unpackedSize\":5585496},\"engines\":{\"node\":\">= 10\"},\"funding\":{\"url\":\"https://github.com/sponsors/Brooooooklyn\",\"type\":\"github\"},\"gitHead\":\"b1239101d38c607a9ca427f8a8490a6ee168e91d\",\"_npmUser\":{\"name\":\"broooooklyn\",\"email\":\"lynweklm@gmail.com\"},\"repository\":{\"url\":\"git+https://github.com/napi-rs/napi-rs.git\",\"type\":\"git\"},\"_npmVersion\":\"lerna/8.0.2/node@v18.20.3+x64 (linux)\",\"description\":\"Cli tools for napi-rs\",\"directories\":{},\"_nodeVersion\":\"18.20.3\",\"publishConfig\":{\"access\":\"public\",\"registry\":\"https://registry.npmjs.org/\"},\"_hasShrinkwrap\":false,\"devDependencies\":{\"fdir\":\"^6.1.1\",\"toml\":\"^3.0.0\",\"debug\":\"^4.3.5\",\"tslib\":\"^2.6.3\",\"core-js\":\"^3.37.1\",\"js-yaml\":\"^4.1.0\",\"inquirer\":\"9.3.2\",\"typanion\":\"^3.14.0\",\"clipanion\":\"^3.2.1\",\"colorette\":\"^2.0.20\",\"env-paths\":\"^3.0.0\",\"lodash-es\":\"4.17.21\",\"@octokit/rest\":\"21.0.0\",\"@types/js-yaml\":\"^4.0.9\",\"@types/inquirer\":\"^9.0.7\",\"@types/lodash-es\":\"^4.17.12\"},\"_npmOperationalInternal\":{\"tmp\":\"tmp/cli_2.18.4_1719829789428_0.9553875310539146\",\"host\":\"s3://npm-registry-packages\"}}}}",
     "dest": "deno_dir/npm/registry.npmjs.org/@napi-rs/cli",
     "dest-filename": "registry.json"
   },
@@ -756,9 +775,8 @@
     "dest": "deno_dir/npm/registry.npmjs.org/@napi-rs/cli/2.18.4"
   },
   {
-    "type": "file",
-    "url": "https://registry.npmjs.org/@slint-ui/slint-ui-binary-linux-arm64-gnu",
-    "sha256": "d3ef302c574ee999f201ef95ea337d8674c13f110c50c46a35444b1031b1fa24",
+    "type": "inline",
+    "contents": "{\"name\":\"@slint-ui/slint-ui-binary-linux-arm64-gnu\",\"dist-tags\":{},\"versions\":{\"1.11.0\":{\"name\":\"@slint-ui/slint-ui-binary-linux-arm64-gnu\",\"version\":\"1.11.0\",\"_id\":\"@slint-ui/slint-ui-binary-linux-arm64-gnu@1.11.0\",\"maintainers\":[{\"name\":\"tronical\",\"email\":\"npm@slint-ui.com\"}],\"os\":[\"linux\"],\"cpu\":[\"arm64\"],\"dist\":{\"shasum\":\"431567209e8681a2c75f0ad38d9b83c50e2fa458\",\"tarball\":\"https://registry.npmjs.org/@slint-ui/slint-ui-binary-linux-arm64-gnu/-/slint-ui-binary-linux-arm64-gnu-1.11.0.tgz\",\"fileCount\":3,\"integrity\":\"sha512-XRt2Y3RzTgFVZu5Ssar+vLE7qhqR/ksQK2SlEqzO90ifxFLDhU6lJsrxuKFG32K931M4hmA0Zhj3SUrKlh3QUA==\",\"signatures\":[{\"sig\":\"MEUCIQDFgk8wLc5ChktOHhJB5FQAtGuv9Ukg7oDYyOq1gghrsAIgAUlzyTuPXEYAH+zR9eG/jKR9T3exNGYsYDbRb3Od4J8=\",\"keyid\":\"SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U\"}],\"unpackedSize\":34787463},\"libc\":[\"glibc\"],\"main\":\"index.linux-arm64-gnu.node\",\"_from\":\"file:api/node/slint-ui-slint-ui-binary-linux-arm64-gnu-1.11.0.tgz\",\"_npmUser\":{\"name\":\"tronical\",\"email\":\"npm@slint-ui.com\"},\"_resolved\":\"/home/runner/work/slint/slint/api/node/slint-ui-slint-ui-binary-linux-arm64-gnu-1.11.0.tgz\",\"_integrity\":\"sha512-XRt2Y3RzTgFVZu5Ssar+vLE7qhqR/ksQK2SlEqzO90ifxFLDhU6lJsrxuKFG32K931M4hmA0Zhj3SUrKlh3QUA==\",\"_npmVersion\":\"10.8.2\",\"description\":\"This is the **aarch64-unknown-linux-gnu** binary for `@slint-ui/slint-ui-binary`\",\"directories\":{},\"_nodeVersion\":\"20.19.0\",\"_hasShrinkwrap\":false,\"_npmOperationalInternal\":{\"tmp\":\"tmp/slint-ui-binary-linux-arm64-gnu_1.11.0_1745406201725_0.9545473420840243\",\"host\":\"s3://npm-registry-packages-npm-production\"}}}}",
     "dest": "deno_dir/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-arm64-gnu",
     "dest-filename": "registry.json"
   },
@@ -773,9 +791,8 @@
     ]
   },
   {
-    "type": "file",
-    "url": "https://registry.npmjs.org/@slint-ui/slint-ui-binary-linux-x64-gnu",
-    "sha256": "55ffb4c8946edeef3215922dd25b1d17409748d560b5b35f47ae30ac3ec912c7",
+    "type": "inline",
+    "contents": "{\"name\":\"@slint-ui/slint-ui-binary-linux-x64-gnu\",\"dist-tags\":{},\"versions\":{\"1.11.0\":{\"name\":\"@slint-ui/slint-ui-binary-linux-x64-gnu\",\"version\":\"1.11.0\",\"_id\":\"@slint-ui/slint-ui-binary-linux-x64-gnu@1.11.0\",\"maintainers\":[{\"name\":\"tronical\",\"email\":\"npm@slint-ui.com\"}],\"os\":[\"linux\"],\"cpu\":[\"x64\"],\"dist\":{\"shasum\":\"9d49ac75acbdaf80cb45e5566c54d6f2687ea705\",\"tarball\":\"https://registry.npmjs.org/@slint-ui/slint-ui-binary-linux-x64-gnu/-/slint-ui-binary-linux-x64-gnu-1.11.0.tgz\",\"fileCount\":3,\"integrity\":\"sha512-ZhGkGrfelmlzPorbBF5YCtNgFvJth4Suz3LH8BY0aypH3VPT8Q/TqbpbN75KvCAtLmj4kayj6+APHPkiR1Zs1w==\",\"signatures\":[{\"sig\":\"MEYCIQCfWQncz8ArHfjcjPowimlNOu6UndpTlXSq323O39AfGwIhAI81GBvQ8RuZMal6ZEz/rc1yM6dVkmHHppIq2i8Yh20m\",\"keyid\":\"SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U\"}],\"unpackedSize\":35850236},\"libc\":[\"glibc\"],\"main\":\"index.linux-x64-gnu.node\",\"_from\":\"file:api/node/slint-ui-slint-ui-binary-linux-x64-gnu-1.11.0.tgz\",\"_npmUser\":{\"name\":\"tronical\",\"email\":\"npm@slint-ui.com\"},\"_resolved\":\"/home/runner/work/slint/slint/api/node/slint-ui-slint-ui-binary-linux-x64-gnu-1.11.0.tgz\",\"_integrity\":\"sha512-ZhGkGrfelmlzPorbBF5YCtNgFvJth4Suz3LH8BY0aypH3VPT8Q/TqbpbN75KvCAtLmj4kayj6+APHPkiR1Zs1w==\",\"_npmVersion\":\"10.8.2\",\"description\":\"This is the **x86_64-unknown-linux-gnu** binary for `@slint-ui/slint-ui-binary`\",\"directories\":{},\"_nodeVersion\":\"20.19.0\",\"_hasShrinkwrap\":false,\"_npmOperationalInternal\":{\"tmp\":\"tmp/slint-ui-binary-linux-x64-gnu_1.11.0_1745406198060_0.8084203502778098\",\"host\":\"s3://npm-registry-packages-npm-production\"}}}}",
     "dest": "deno_dir/npm/registry.npmjs.org/@slint-ui/slint-ui-binary-linux-x64-gnu",
     "dest-filename": "registry.json"
   },
@@ -790,9 +807,8 @@
     ]
   },
   {
-    "type": "file",
-    "url": "https://registry.npmjs.org/slint-ui",
-    "sha256": "849c58e9a9b3d636858ae3c5f66a24d39ad8d8ee1bffced112fb3eb3c9061bb5",
+    "type": "inline",
+    "contents": "{\"name\":\"slint-ui\",\"dist-tags\":{},\"versions\":{\"1.11.0\":{\"name\":\"slint-ui\",\"version\":\"1.11.0\",\"keywords\":[\"GUI\",\"UI\",\"native\",\"node\",\"Slint\",\"desktop\",\"embedded\"],\"license\":\"SEE LICENSE IN LICENSE.md\",\"_id\":\"slint-ui@1.11.0\",\"maintainers\":[{\"name\":\"tronical\",\"email\":\"npm@slint-ui.com\"}],\"homepage\":\"https://github.com/slint-ui/slint\",\"bugs\":{\"url\":\"https://github.com/slint-ui/slint/issues\"},\"ava\":{\"timeout\":\"2m\",\"typescript\":{\"compile\":false,\"extensions\":[\"mts\"],\"rewritePaths\":{\"__test__/\":\"build/\"}},\"workerThreads\":false},\"dist\":{\"shasum\":\"c2f45059849c7cf587de16d9f3ea92e51468dbb8\",\"tarball\":\"https://registry.npmjs.org/slint-ui/-/slint-ui-1.11.0.tgz\",\"fileCount\":51,\"integrity\":\"sha512-Sup0aBv9hWlYB6Ncs04za0clYZIg6kx/r25sfmaIl7nKO6pCGu8X5M8A2XSe8DZn3pPHlzF8Gqu0CNALdDLaFA==\",\"signatures\":[{\"sig\":\"MEUCIC/AlWNoTJ/jxbG9BW9X63BZMTbvNk/pmOXRgu6pLF1RAiEA9TGyEDjOKkWKbB1gVFqdzJYsPayoR7Hv0cL9fTx70xw=\",\"keyid\":\"SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U\"}],\"unpackedSize\":426258},\"main\":\"dist/index.js\",\"_from\":\"file:api/node/slint-ui-1.11.0.tgz\",\"types\":\"dist/index.d.ts\",\"engines\":{\"node\":\">= 10\"},\"scripts\":{\"docs\":\"pnpm build && typedoc --hideGenerator --readme cover.md typescript/index.ts && cargo about generate thirdparty.hbs -o docs/thirdparty.html\",\"lint\":\"biome lint\",\"test\":\"tsc --build __test__/tsconfig.json && ava\",\"build\":\"napi build --platform --release --js rust-module.cjs --dts rust-module.d.cts -c binaries.json\",\"check\":\"biome check\",\"format\":\"biome format\",\"compile\":\"tsc --build\",\"install\":\"node build-on-demand.mjs\",\"lint:fix\":\"biome lint --fix\",\"artifacts\":\"napi artifacts\",\"docs:debug\":\"pnpm build:debug && typedoc --hideGenerator --readme cover.md typescript/index.ts\",\"format:fix\":\"biome format --write\",\"build:debug\":\"napi build --platform --js rust-module.cjs --dts rust-module.d.cts -c binaries.json && pnpm compile\",\"build:testing\":\"napi build --platform --js rust-module.cjs --dts rust-module.d.cts -c binaries.json --features testing && pnpm compile\"},\"_npmUser\":{\"name\":\"tronical\",\"email\":\"npm@slint-ui.com\"},\"_resolved\":\"/home/runner/work/slint/slint/api/node/slint-ui-1.11.0.tgz\",\"_integrity\":\"sha512-Sup0aBv9hWlYB6Ncs04za0clYZIg6kx/r25sfmaIl7nKO6pCGu8X5M8A2XSe8DZn3pPHlzF8Gqu0CNALdDLaFA==\",\"repository\":{\"url\":\"git+https://github.com/slint-ui/slint.git\",\"type\":\"git\"},\"_npmVersion\":\"10.8.2\",\"description\":\"Slint is a declarative GUI toolkit to build native user interfaces for desktop and embedded applications.\",\"directories\":{},\"_nodeVersion\":\"20.19.0\",\"dependencies\":{\"@napi-rs/cli\":\"2.18.4\"},\"_hasShrinkwrap\":false,\"devDependencies\":{\"ava\":\"6.2.0\",\"jimp\":\"1.6.0\",\"typedoc\":\"0.28.2\",\"typescript\":\"5.8.3\",\"@types/node\":\"20.16.10\",\"@biomejs/biome\":\"1.9.4\",\"@ava/typescript\":\"5.0.0\",\"capture-console\":\"1.0.2\",\"@types/capture-console\":\"1.0.5\"},\"optionalDependencies\":{\"@slint-ui/slint-ui-binary-darwin-x64\":\"1.11.0\",\"@slint-ui/slint-ui-binary-darwin-arm64\":\"1.11.0\",\"@slint-ui/slint-ui-binary-linux-x64-gnu\":\"1.11.0\",\"@slint-ui/slint-ui-binary-win32-x64-msvc\":\"1.11.0\",\"@slint-ui/slint-ui-binary-linux-arm64-gnu\":\"1.11.0\"},\"_npmOperationalInternal\":{\"tmp\":\"tmp/slint-ui_1.11.0_1745406214682_0.05410041818239186\",\"host\":\"s3://npm-registry-packages-npm-production\"}}}}",
     "dest": "deno_dir/npm/registry.npmjs.org/slint-ui",
     "dest-filename": "registry.json"
   },
