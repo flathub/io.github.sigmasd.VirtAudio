@@ -1,6 +1,6 @@
 app-id: io.github.sigmasd.VirtAudio
 runtime: org.freedesktop.Platform
-runtime-version: "24.08"
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: virtaudio
 finish-args:
@@ -72,8 +72,8 @@ modules:
       - -Dzshcompletiondir=no
     sources:
       - type: archive
-        url: https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.28.1/libinput-1.28.1.tar.gz
-        sha256: a13f8c9a7d93df3c85c66afd135f0296701d8d32f911991b7aa4273fdd6a42a3
+        url: https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.29.1/libinput-1.29.1.tar.gz
+        sha256: 98bb615d98ddc4607bddb13a7b7550d129eb8cd16f86cd5ca090207bc46b488b
         x-checker-data:
           type: anitya
           project-id: 5781
@@ -94,8 +94,8 @@ modules:
     build-commands:
       # Compile App
       - mv vendor src/
-      - ./deno compile --vendor --no-check --output virtaudio-bin --cached-only
-        --allow-all --include ./src/gui.slint --include ./src/client.html ./src/gui.ts
+      - ./deno compile --vendor --no-check --output virtaudio-bin --cached-only --allow-all
+        --include ./src/gui.slint --include ./src/client.html ./src/gui.ts
 
       # Install metadata
       - install -D distro/io.github.sigmasd.VirtAudio.desktop -t /app/share/applications/
