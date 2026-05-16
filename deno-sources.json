@@ -2,7 +2,7 @@
   {
     "type": "file",
     "url": "https://jsr.io/@sigma/deno-compile-extra/meta.json",
-    "sha256": "34fb7b02e9b8af8ed978fd68192d133f2494d4ce39a035530e7528f1b481aa59",
+    "sha256": "23cd9455208ea2b16574fbb2bac006c1dccd72d0269396fafe69636344508627",
     "dest": "vendor/jsr.io/@sigma/deno-compile-extra",
     "dest-filename": "meta.json"
   },
@@ -86,7 +86,7 @@
   {
     "type": "file",
     "url": "https://jsr.io/@std/path/meta.json",
-    "sha256": "0fe4a38171e6481943decc80b6758ba4ba9be7627b0693358bc26d70ccfe2336",
+    "sha256": "abdd38f3a4ff174de194d0b54ea90ec2bb581042f3d58543dcf1bed0ee20cfa1",
     "dest": "vendor/jsr.io/@std/path",
     "dest-filename": "meta.json"
   },
