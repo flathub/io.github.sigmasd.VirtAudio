@@ -110,6 +110,11 @@ modules:
       - /app/deno_dir
 
     sources:
+      # A quick fix
+      - type: file
+        url: https://raw.githubusercontent.com/sigmaSd/virtAudio/9ff2b9f61b7f2af93d0126cc650222f18f7276bb/LICENSE
+        sha256: 22146bd402d2e8b61b2adb1499166951436d80e89e06b8a0c1e49339d9ce531f
+
       - deno-sources.json
       # app
       - type: archive
