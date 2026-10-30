@@ -32,8 +32,8 @@ modules:
       - /bin
     sources:
       - type: archive
-        url: https://www.freedesktop.org/software/libevdev/libevdev-1.13.7.tar.xz
-        sha256: 0caf824971108f15bb2ad356433bae198d7d3bf1e82d43f63626e069e060bfa6
+        url: https://www.freedesktop.org/software/libevdev/libevdev-1.14.0.tar.xz
+        sha256: 5a0966c7110648665983848bad696c7acba614a2160d2865d535397101007332
         x-checker-data:
           type: anitya
           project-id: 20540
@@ -80,13 +80,15 @@ modules:
       - /share/libinput
     sources:
       - type: archive
-        url: https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.32.0/libinput-1.32.0.tar.gz
+        url: 
+          https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.32.0/libinput-1.32.0.tar.gz
         sha256: 7dd6c1ca964c86eb6810ccd6639cda634e68bdca43bf3afec39e94e942fac8d4
         x-checker-data:
           type: anitya
           project-id: 5781
           stable-only: true
-          url-template: https://gitlab.freedesktop.org/libinput/libinput/-/archive/$version/libinput-$version.tar.gz
+          url-template: 
+            https://gitlab.freedesktop.org/libinput/libinput/-/archive/$version/libinput-$version.tar.gz
 
   - name: virtaudio
     buildsystem: simple
@@ -112,7 +114,8 @@ modules:
     sources:
       # A quick fix
       - type: file
-        url: https://raw.githubusercontent.com/sigmaSd/virtAudio/9ff2b9f61b7f2af93d0126cc650222f18f7276bb/LICENSE
+        url: 
+          https://raw.githubusercontent.com/sigmaSd/virtAudio/9ff2b9f61b7f2af93d0126cc650222f18f7276bb/LICENSE
         sha256: 22146bd402d2e8b61b2adb1499166951436d80e89e06b8a0c1e49339d9ce531f
 
       - deno-sources.json
@@ -124,22 +127,26 @@ modules:
 
       # deno
       - type: archive
-        url: https://github.com/denoland/deno/releases/download/v2.3.1/deno-x86_64-unknown-linux-gnu.zip
+        url: 
+          https://github.com/denoland/deno/releases/download/v2.3.1/deno-x86_64-unknown-linux-gnu.zip
         sha256: b2920265e633215959b09a32b67f46c93362842bbfd27c96e8acc2d24b66f563
         only-arches:
           - x86_64
       - type: archive
-        url: https://github.com/denoland/deno/releases/download/v2.3.1/denort-x86_64-unknown-linux-gnu.zip
+        url: 
+          https://github.com/denoland/deno/releases/download/v2.3.1/denort-x86_64-unknown-linux-gnu.zip
         sha256: 611c72c6e3de743c3f04eeb5f43cfb94dee7a232c7142d63f1967478bd220d11
         only-arches:
           - x86_64
       - type: archive
-        url: https://github.com/denoland/deno/releases/download/v2.3.1/deno-aarch64-unknown-linux-gnu.zip
+        url: 
+          https://github.com/denoland/deno/releases/download/v2.3.1/deno-aarch64-unknown-linux-gnu.zip
         sha256: 3771ede34037694591846166f6211e7a8ab5cd77a1e7143e637d4457e8708dc7
         only-arches:
           - aarch64
       - type: archive
-        url: https://github.com/denoland/deno/releases/download/v2.3.1/denort-aarch64-unknown-linux-gnu.zip
+        url: 
+          https://github.com/denoland/deno/releases/download/v2.3.1/denort-aarch64-unknown-linux-gnu.zip
         sha256: bec92b837f50d0330a532a53fcbcf8383eed3d5e4575d893cca59c50d4724c1f
         only-arches:
           - aarch64
